@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author lst
- * @date 2023年11月10日 11:31
+ * @date 2023年11月10日 15:12
  */
 @Component
 @Aspect
-public class TimeAspect {
-    @Pointcut("execution(* org.wego.controller.*.*(..))")
+public class MyAspect {
+    @Pointcut("@annotation(org.wego.aop.MyLog)")
     private void pt() {
     }
 

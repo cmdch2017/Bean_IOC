@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.wego.aop.MyLog;
 import org.wego.domain.User;
 import org.wego.service.UserService;
 
@@ -23,6 +24,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @MyLog
     @RequestMapping("getAllUser")
     public List<User> getAllUser() {
         return userService.list();
